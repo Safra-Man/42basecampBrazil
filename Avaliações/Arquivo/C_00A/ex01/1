@@ -1,0 +1,60 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    1                                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: wsafra-l <wsafra-l@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/26 17:52:31 by gunoguei          #+#    #+#              #
+#    Updated: 2020/11/27 11:19:54 by wsafra-l         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#include <unistd.h>
+// a = 97 e z = 122;
+
+void	ft_print_alphabet(void)
+{
+	char c;
+
+	c = 'a';
+	while (c <= 'z')
+	{
+		write(1, &c, 1);
+		c++;
+	}
+	
+	//Solução do Loop com char
+	/*
+	char c;
+
+				// 'a' Entende como o Caractere a 
+				// "a." Entende como a Frase a (Frase => String: sequencia de caracteres)
+	//c = a;		//problema: considera a uma variavel que não existe
+	//c = "a";	//problema: considerar que é uma string (caractere terminativo oculto)
+	c = 'a';	//correta: '' aspas simples para Chars.
+
+	while(c <= 'z')
+	{
+		write(1, &c, 1);
+		c++;		//Equivalentes: // c = c + 1;  // c += 1;
+	}
+	*/	
+
+	//Solução do Loop com int
+	//Loop do a até o z
+	/*
+	int posicao;
+
+	posicao = 97;
+
+	while (posicao <= 122)
+	{
+		write(1, &posicao, 1);
+		posicao = posicao + 1;
+	}
+	*/
+	
+	//Solução: Gol de Mão
+	//write(1, "abcdefghijklmnopqrstuvxywz", 26);	
+}
